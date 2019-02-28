@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var handlebars = require('express-handlebars').create({ default: 'main' });
+var handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
