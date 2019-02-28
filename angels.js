@@ -19,7 +19,9 @@ app.get('/', function (req, res) {
 })
 
 app.get('/pcs', function (req, res) {
-    res.render('pcs');
+    context = {};
+    context.glory = 448;
+    res.render('pcs', context);
 })
 
 app.get('/npcs', function (req, res) {

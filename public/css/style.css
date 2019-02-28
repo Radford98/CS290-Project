@@ -2,6 +2,13 @@
     text-decoration: line-through;
 }
 
+body {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/*Styles for the carousel*/
 #carousel {
     margin-left: auto;
     margin-right: auto;
@@ -14,8 +21,26 @@
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
-body {
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
+
+
+/*Styles for pcs*/
+.character{
+    margin-top: 20px;
+}
+
+.profile {
+    display: inline;
+    float: left;
+}
+
+.credit{
+    font-size: 10px;
+}
+
+#gulak, #ari, #caelynn, #xeka {
+    padding-left: 10px;
+    display: block;
+    overflow: auto;
+    text-align: left;
+    height: 100px;
 }
