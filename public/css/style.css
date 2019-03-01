@@ -1,11 +1,10 @@
-.strike {
-    text-decoration: line-through;
-}
-
 body {
-    text-align: center;
     padding-left: 20%;
     padding-right: 20%;
+}
+
+.title {
+    text-align: center;
 }
 
 /*Styles for the carousel*/
@@ -21,11 +20,18 @@ body {
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+/*Styles for home*/
+.bodyText {
+    text-align: center;
+}
 
+.strike {
+    text-decoration: line-through;
+}
 
 /*Styles for pcs*/
 .character{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .profile {
@@ -41,6 +47,15 @@ body {
     padding-left: 10px;
     display: block;
     overflow: auto;
-    text-align: left;
     height: 100px;
+}
+
+#clayHeroes {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#clayTag {
+    text-align: center;
 }
