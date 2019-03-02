@@ -1,6 +1,36 @@
+#navBar {
+    background-color: lightblue;
+    position: relative;
+    left: 50%;
+    width: 790px;
+    margin-left: -395px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.navElement {
+    position: relative;
+    top: 17px;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Algerian;
+    font-size: 16px;
+}
+
+ul a:link, ul a:visited{
+    text-decoration: none;
+    color:darkblue;
+}
+
+ul a:hover{
+    color:black;
+}
+
 body {
     padding-left: 20%;
     padding-right: 20%;
+    background-color: darkseagreen !important;
 }
 
 .title {
