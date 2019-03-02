@@ -1,3 +1,44 @@
-<h1>Review</h1>
+<h1 class="title">Review</h1>
 
-<p>Please leave a review for our (non-existent) podcast!</p>
+<form id="review" action="./forms" method="post">
+    <fieldset>
+        <legend>Please leave a review for our (non-existent) podcast!</legend>
+        <label for="stars">Rating:</label>
+        {{#each stars}}
+            <input type="radio" name="stars" value="{{this}}" />{{this}}-star
+        {{/each}}
+        <br />
+
+        <label for="favePC">Favorite PC:</label>
+        <select name="favePC">
+            {{#each pcs}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+        <br />
+
+        <label for="faveNPC">Favorite NPC:</label>
+        <select name="faveNPC">
+            {{#each npcs}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+        <br />
+
+        <label for="kingdom">Favorite Kingdom:</label>
+        {{#each kingdoms}}
+            <input type="radio" name="kingdom" value="{{this}}" />{{this}}
+        {{/each}}
+        <br />
+
+        <label for="comment" id="commentLabel">Leave a comment:</label>
+        <textarea id="comment" name="comment"></textarea>
+        <br />
+
+        <label for="giveGlory">Give Gulak some glory:</label>
+        <input type="number" name="giveGlory" />
+        <br />
+
+        <input type="submit" id="submitForm"/>
+    </fieldset>
+</form>

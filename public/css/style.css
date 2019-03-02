@@ -59,3 +59,23 @@ body {
 #clayTag {
     text-align: center;
 }
+
+/*Styles for review*/
+#comment {
+    width: 300px;
+    height: 80px;
+}
+
+#commentLabel{
+    position: relative;
+    bottom: 40px;
+}
+
+/*Styles for world*/
+#worldMap{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 375px;
+}

@@ -2,10 +2,12 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-var credentials = require('./credentials.js')
+var session = require('express-session');
+var credentials = require('./credentials.js');
 var handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 var bodyParser = require('body-parser');
 
+app.use(session({ secret: 'ImASecret' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -21,7 +23,7 @@ app.get('/', function (req, res) {
 
 app.get('/pcs', function (req, res) {
     context = {};
-    context.glory = 448;
+    context.glory = (req.session.glory + 448) || 448;
     res.render('pcs', context);
 })
 
@@ -68,8 +70,17 @@ app.get('/world', function (req, res) {
 
 
 app.get('/review', function (req, res) {
-    res.render('review');
+    var context = {
+        stars: [1, 2, 3, 4, 5],
+        pcs: ["Gulak", "Xeka", "Caelynn", "Ari"],
+        npcs: ["Romana", "Ashkenaz", "Lucus", "Alastra", "Hagatha"],
+        kingdoms: ["Dostearan", "Aldurn"]
+    };
+
+    res.render('review', context);
 })
+
+app.use('/forms', require('./myForms.js'));
 
 app.use(function (req, res) {
     res.status(404);
