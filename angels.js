@@ -77,6 +77,11 @@ app.get('/review', function (req, res) {
         kingdoms: ["Dostearan", "Aldurn"]
     };
 
+    if (req.session.thanks) {
+        context.thanks = req.session.thanks;
+        req.session.thanks = "";    // Reset thanks so it displays once per review
+    }
+
     res.render('review', context);
 })
 

@@ -28,6 +28,7 @@ router.post('/', function (req, res) {
     } else {
         req.session.glory += Number(req.body.giveGlory);
     }
+    req.session.thanks = "Thank you for your review!";
     console.log(context);
     console.log(req.session.glory);
     res.redirect('/review');
